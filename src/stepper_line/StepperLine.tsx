@@ -12,6 +12,7 @@ export default class StepperLine extends React.Component<StepperLineProps, any> 
     super(_props);
 
     this.state = {
+      step: this.props.step ? this.props.step : 1,
       points: Array.from({length: this.props.totalSteps}, (v, i) => i)
     };
 
@@ -22,7 +23,7 @@ export default class StepperLine extends React.Component<StepperLineProps, any> 
     return <div className={"stepper mb-2"}>
       {
         me.state.points.map((_p: number, _index: number) => {
-          let isActive = _p < me.props.step ? "active" : "";
+          let isActive = _p < me.state.step ? "active" : "";
           return <>
             <div className={`stepper-number ${isActive}`}><span>{_p + me.props.startNumber}</span></div>
             { _index < me.state.points.length - 1 &&
