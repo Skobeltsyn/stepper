@@ -1,0 +1,36 @@
+{
+  "name": "stepper",
+  "version": "0.0.2",
+  "description": "React stepper component",
+  "main": "index.ts",
+  "scripts": {
+    "test": "jest",
+    "clean_win": "rmdir /s /q dist",
+    "build": "npm run clean_win & tsc & cp package.json dist & cp  README.md dist",
+    "publish": "npm publish dist --registry http://151.248.114.248:5000/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Skobeltsyn/stepper.git"
+  },
+  "keywords": [
+    "Stepper",
+    "React"
+  ],
+  "author": "K.Skobeltsyn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Skobeltsyn/stepper/issues"
+  },
+  "homepage": "https://github.com/Skobeltsyn/stepper#readme",
+  "dependencies": {
+    "api-engine": "^0.0.22",
+    "widget": "^0.2.4"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.26",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^4.9.4"
+  }
+}
